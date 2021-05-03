@@ -116,7 +116,9 @@ export default {
 </script>
 <style scoped>
 .sidebar{
-  background-color: white
+  background-color: white;
+  max-height: calc(100% - 50px);
+  overflow-y: auto;
 }
 .sidebar-nav{
   padding: 0; 

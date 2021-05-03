@@ -11,7 +11,7 @@
                   <p class="font--18 text--primary"
                   style="font-size: 1.2em">Pay as you go insurance you control.</p>
               </div>
-              <img :src="paddycover" class="img-fluid" width="150" style="" alt="">
+              <img :src="paddycover" class="img-fluid img"  style="" alt="">
             </div>
             <div class="card-box">
               <router-link to="" style=" min-height: 150px; background: linear-gradient(98.06deg, #14801B 1.36%, #00A859 92.41%); text-decoration: none"
@@ -90,12 +90,18 @@ export default {
 }
 </script>
 <style scoped>
+.img{
+  width: 120px
+}
 @media only screen and (min-width: 1024px){
   /* .item{
     display: inline-bock;
     width: 30%;
     margin: 1.667%
   } */
+  .img{
+    width: 150px
+  }
 }
 
 </style>
