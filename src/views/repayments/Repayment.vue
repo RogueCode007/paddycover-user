@@ -14,7 +14,12 @@ import RepaymentTable from './RepaymentTable'
 export default {
   components:{
     RepaymentTable
-  }
+  },
+  beforeCreate(){
+    if(this.$store.state.sidebarShow == true){
+      this.$store.commit('toggleSidebarMobile');
+    }
+  },
 }
 </script>
 

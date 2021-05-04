@@ -9,17 +9,17 @@
       <CHeaderNavLink class='d-flex align-items-end'>
         <div class="c-avatar">
           <img
-            src="img/avatars/6.jpg"
+            :src="placeholder"
             class="c-avatar-img "
           />
         </div>
         <p class="mb-0 ml-2 text-white">Hello John</p>
       </CHeaderNavLink>
     </template>
-    <!-- <CDropdownHeader tag="div" class="text-center" color="light">
+     <CDropdownHeader tag="div" class="text-center" color="light">
       <strong>Account</strong>
     </CDropdownHeader>
-    <CDropdownItem>
+    <!-- <CDropdownItem>
       <CIcon name="cil-bell"/> Updates
       <CBadge color="info" class="mfs-auto">{{ itemsCount }}</CBadge>
     </CDropdownItem>
@@ -42,20 +42,6 @@
     >
       <strong>Settings</strong>
     </CDropdownHeader>
-    <CDropdownItem>
-      <CIcon name="cil-user" /> Profile
-    </CDropdownItem>
-    <CDropdownItem>
-      <CIcon name="cil-settings" /> Settings
-    </CDropdownItem>
-    <CDropdownItem>
-      <CIcon name="cil-dollar" /> Payments
-      <CBadge color="secondary" class="mfs-auto">{{ itemsCount }}</CBadge>
-    </CDropdownItem>
-    <CDropdownItem>
-      <CIcon name="cil-file" /> Projects
-      <CBadge color="primary" class="mfs-auto">{{ itemsCount }}</CBadge>
-    </CDropdownItem>
     <CDropdownDivider/>
     <CDropdownItem>
       <CIcon name="cil-shield-alt" /> Lock Account
@@ -67,11 +53,13 @@
 </template>
 
 <script>
+import placeholder from '@/assets/images/placeholder-img.png'
 export default {
   name: 'TheHeaderDropdownAccnt',
   data () {
     return { 
-      itemsCount: 42
+      itemsCount: 42,
+      placeholder: placeholder
     }
   }
 }

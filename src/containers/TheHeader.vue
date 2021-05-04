@@ -21,13 +21,13 @@
         </CHeaderNavLink>
       </CHeaderNavItem>
       <CHeaderNavItem class="px-3">
-        <CHeaderNavLink to="/users" exact class="text-white">
-          Users
+        <CHeaderNavLink to="/claims" exact class="text-white">
+          Claims
         </CHeaderNavLink>
       </CHeaderNavItem>
       <CHeaderNavItem class="px-3">
-        <CHeaderNavLink class="text-white">
-          Settings
+        <CHeaderNavLink to="/dependents" class="text-white">
+          Dependents
         </CHeaderNavLink>
       </CHeaderNavItem>
     </CHeaderNav>
@@ -45,17 +45,12 @@
 
 <script>
 import TheHeaderDropdownAccnt from './TheHeaderDropdownAccnt'
-import TheHeaderDropdownNotif from './TheHeaderDropdownNotif'
-import TheHeaderDropdownTasks from './TheHeaderDropdownTasks'
-import TheHeaderDropdownMssgs from './TheHeaderDropdownMssgs'
+
 import Logo from '@/assets/images/logo.svg'
 export default {
   name: 'TheHeader',
   components: {
     TheHeaderDropdownAccnt,
-    TheHeaderDropdownNotif,
-    TheHeaderDropdownTasks,
-    TheHeaderDropdownMssgs
   },
   data(){
     return {

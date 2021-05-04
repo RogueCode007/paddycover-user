@@ -17,7 +17,12 @@ import ClaimsTable from './ClaimsTable'
 export default {
   components:{
     ClaimsTable
-  }
+  },
+  beforeCreate(){
+    if(this.$store.state.sidebarShow == true){
+      this.$store.commit('toggleSidebarMobile');
+    }
+  },
 }
 </script>
 

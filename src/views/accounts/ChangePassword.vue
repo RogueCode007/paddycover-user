@@ -39,7 +39,12 @@ export default {
     return {
       
     }
-  }
+  },
+  beforeCreate(){
+    if(this.$store.state.sidebarShow == true){
+      this.$store.commit('toggleSidebarMobile');
+    }
+  },
 }
 </script>
 

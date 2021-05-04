@@ -77,7 +77,8 @@
 </template>
 
 <script>
-import SidebarItems from './SidebarItems'
+
+// import sidebar icons/images
 import Logo from '@/assets/images/logo.svg'
 import Layout from '@/assets/images/layout.svg'
 import Account from '@/assets/images/account-icon.svg'
@@ -87,9 +88,9 @@ import transaction from '@/assets/images/transaction-icon.svg'
 import card from '@/assets/images/credit-card.svg'
 import admin from '@/assets/images/admin.svg'
 import logout from '@/assets/images/power-button.svg'
+
 export default {
   name: 'TheSidebar',
-  extends: SidebarItems,
   data(){
     return {
       Logo: Logo,

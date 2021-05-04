@@ -115,7 +115,12 @@ export default {
         "Zamfara"
       ],
     }
-  }
+  },
+  beforeCreate(){
+    if(this.$store.state.sidebarShow == true){
+      this.$store.commit('toggleSidebarMobile');
+    }
+  },
 }
 </script>
 

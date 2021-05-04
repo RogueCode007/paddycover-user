@@ -14,7 +14,12 @@ import CardsTable from './CardsTable'
 export default {
   components:{
     CardsTable
-  }
+  },
+  beforeCreate(){
+    if(this.$store.state.sidebarShow == true){
+      this.$store.commit('toggleSidebarMobile');
+    }
+  },
 }
 </script>
 

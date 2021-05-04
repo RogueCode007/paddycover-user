@@ -17,7 +17,12 @@ import TransactionsTable from './TransactionsTable'
 export default {
   components:{
     TransactionsTable
-  }
+  },
+ beforeCreate(){
+    if(this.$store.state.sidebarShow == true){
+      this.$store.commit('toggleSidebarMobile');
+    }
+  },
 }
 </script>
 

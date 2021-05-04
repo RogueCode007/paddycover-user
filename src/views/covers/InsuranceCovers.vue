@@ -14,7 +14,12 @@ import InsuranceCoversTable from './InsuranceCoversTable'
 export default {
   components:{
     InsuranceCoversTable
-  }
+  },
+  beforeCreate(){
+    if(this.$store.state.sidebarShow == true){
+      this.$store.commit('toggleSidebarMobile');
+    }
+  },
 }
 </script>
 

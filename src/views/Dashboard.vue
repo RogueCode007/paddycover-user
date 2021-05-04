@@ -39,8 +39,8 @@
                 <p style="font-size: 1.1em; font-weight: bold">Annual membership renewal</p>
                 <p>15-02-2020</p>
               </div>
-              <div style="padding: 10px" class="border rounded">
-                <p style="font-size: 1em; font-weight: bold">Annual membership renewal</p>
+              <div style="padding: 10px" class="border rounded mb-2">
+                <p style="font-size: 1.1em; font-weight: bold">Annual membership renewal</p>
                 <p>15-02-2020</p>
               </div>
               <router-link to='/transactions' class="text-center d-block mt-2" style="font-size: 1.1em;">View all Transactions</router-link>
@@ -55,16 +55,11 @@
 </template>
 
 <script>
-import MainChartExample from './charts/MainChartExample'
-import WidgetsDropdown from './widgets/WidgetsDropdown'
-import WidgetsBrand from './widgets/WidgetsBrand'
 import paddycover from '@/assets/images/paddycover.svg'
 export default {
   name: 'Dashboard',
   components: {
-    MainChartExample,
-    WidgetsDropdown,
-    WidgetsBrand
+    
   },
   data () {
     return {
@@ -86,7 +81,13 @@ export default {
       }
       return $color
     }
-  }
+  },
+  beforeCreate(){
+    if(this.$store.state.sidebarShow == true){
+      this.$store.commit('toggleSidebarMobile');
+    }
+  },
+  
 }
 </script>
 <style scoped>
