@@ -1,5 +1,5 @@
 <template>
-  <div class="c-app flex-row align-items-center" :class="{ 'c-dark-theme': $store.state.darkMode }">
+  <div class="c-app flex-row align-items-center">
     <CContainer>
       <CAlert
         v-if="$store.state.status == 'error'"
@@ -47,7 +47,7 @@
             <CCard
               color="white"
               text-color=""
-              class="text-center py-5 d-md-down-none"
+              class="text-center py-5"
               body-wrapper
             >
               <CCardBody style="width: 100%">
@@ -64,11 +64,13 @@
 
 <script>
 import Logo from '@/assets/images/logo.svg'
+import Phone from '@/assets/images/phone-half.svg'
 export default {
   name: 'Login',
   data(){
     return {
       Logo: Logo,
+      Phone: Phone,
       disabled: false,
       user:{email: '',password: ''}
     }
@@ -77,6 +79,7 @@ export default {
     login(){
       this.disabled = true
       const {email, password} = this.user
+      this.$router.push('/')
       // this.$store.dispatch('authRequest', {email, password})
       // .finally(()=>{
       //   this.disabled = false

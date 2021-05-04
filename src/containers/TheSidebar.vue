@@ -9,8 +9,7 @@
     <CSidebarBrand  to="/" style="background-color: white; padding-top: 10px">
       <img :src="Logo" alt="paddycover-logo" :height="100">
     </CSidebarBrand>
-    <!-- <CRenderFunction flat :contentToRender="sidebarItems"/> -->
-    <div class="sidebar sidebar-show">
+    <div class="sidebar sidebar-show" id="sidenav">
       <ul class="sidebar-nav">
         <li class="nav-title">Nav Title</li>
         <li class="nav-item">
@@ -63,7 +62,7 @@
           </transition>
         </li>
         <li class="nav-item">
-          <router-link class="nav-link" to="/theme/colors">
+          <router-link class="nav-link" to="/app/login">
             <img :src="logout" alt="Logout" class="mb-1 mr-3 img-fluid" width="24">Logout
           </router-link>
         </li>
@@ -78,7 +77,7 @@
 
 <script>
 
-// import sidebar icons/images
+// import all sidebar icons/images
 import Logo from '@/assets/images/logo.svg'
 import Layout from '@/assets/images/layout.svg'
 import Account from '@/assets/images/account-icon.svg'
@@ -143,11 +142,33 @@ export default {
 .nav-link{
   cursor: pointer
 }
+
 .collapse-box-enter-active, .collapse-box-leave-active{
   transition: opacity .5s
 }
 .collapse-box-enter, .collapse-box-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;
+}
+
+/* Styling for the sidebar scrollbar */
+#sidenav::-webkit-scrollbar-track
+{
+	box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+#sidenav::-webkit-scrollbar
+{
+	width: 5px;
+	background-color: #F5F5F5;
+}
+
+#sidenav::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #14801B;
 }
 
 </style>
