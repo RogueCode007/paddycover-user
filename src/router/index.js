@@ -12,6 +12,7 @@ const Dashboard = () => import('@/views/Dashboard')
 const Page404 = () => import('@/views/pages/Page404')
 const Page500 = () => import('@/views/pages/Page500')
 const Login = () => import('@/views/pages/Login')
+const Signup = () => import('@/views/pages/Signup')
 const Register = () => import('@/views/pages/Register')
 
 
@@ -104,6 +105,11 @@ export default new Router({
           path: 'login',
           name: 'Login',
           component: Login
+        },
+        {
+          path: 'individual-signup',
+          name: 'Signup',
+          component: Signup
         }
       ]
     },
